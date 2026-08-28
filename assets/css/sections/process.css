@@ -1,0 +1,239 @@
+/* ==========================================
+   PROCESS
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   PROCESS CONTENT
+========================================== */
+
+.process-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+    max-width:42rem;
+
+    margin-inline:auto;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   PROCESS DESCRIPTION
+========================================== */
+
+.process-description{
+
+    max-width:60ch;
+
+    margin-inline:auto;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   PROCESS GRID
+========================================== */
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(5,1fr);
+
+    gap:var(--space-6);
+
+    align-items:start;
+
+}
+
+/* ==========================================
+   PROCESS CARD
+========================================== */
+
+.process-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+
+/* ==========================================
+   PROCESS CARD BODY
+========================================== */
+
+.process-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-3);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:1200px){
+
+    .process-grid{
+
+        grid-template-columns:
+
+            repeat(3,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .process-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+    .process-card::after{
+
+        display:none;
+
+    }
+
+}
+
+/* ==========================================
+   PROCESS CARD
+========================================== */
+
+.process-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+/* ==========================================
+   TIMELINE CONNECTOR
+========================================== */
+
+.process-card:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:1.625rem;
+
+    left:calc(100% - .25rem);
+
+    width:calc(var(--space-6) + .5rem);
+
+    height:2px;
+
+    background:
+
+        linear-gradient(
+
+            to right,
+
+            var(--clr-primary-300),
+
+            var(--border-default)
+
+        );
+
+    z-index:1;
+
+}
+
+
+/* ==========================================
+   PROCESS NUMBER
+========================================== */
+
+.process-number{
+
+    margin-bottom:var(--space-5);
+
+}
+/* ==========================================
+   PROCESS CARD
+========================================== */
+
+.process-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    height:100%;
+
+}
+
+/* ==========================================
+   PROCESS CARD BODY
+========================================== */
+
+.process-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-3);
+
+}
+
+.process-grid{
+
+    margin-top:var(--space-14);
+
+}
+
+@media (max-width:992px){
+
+    .process-card::after{
+
+        display:none;
+
+    }
+
+}

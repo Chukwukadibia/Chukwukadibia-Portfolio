@@ -1,0 +1,208 @@
+/* ==========================================
+   TYPOGRAPHY
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    font-family:var(--ff-body);
+
+    font-size:var(--fs-body);
+
+    font-weight:var(--fw-regular);
+
+    line-height:var(--lh-body);
+
+    color:var(--text-primary);
+
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:var(--ff-heading);
+
+    font-weight:var(--fw-bold);
+
+    line-height:var(--lh-heading);
+
+    letter-spacing:var(--ls-tight);
+
+    color:var(--text-primary);
+
+}
+
+h1{
+
+    font-size:var(--fs-h1);
+
+}
+
+h2{
+
+    font-size:var(--fs-h2);
+
+}
+
+h3{
+
+    font-size:var(--fs-h3);
+
+}
+
+h4{
+
+    font-size:var(--fs-h4);
+
+}
+
+h5{
+
+    font-size:var(--fs-h5);
+
+}
+
+h6{
+
+    font-size:var(--fs-body-lg);
+
+}
+
+/* ==========================================
+   DISPLAY TEXT
+========================================== */
+
+.display{
+
+    font-family:var(--ff-heading);
+
+    font-size:var(--fs-display);
+
+    font-weight:var(--fw-extrabold);
+
+    line-height:1.05;
+
+    letter-spacing:-0.04em;
+
+}
+
+/* ==========================================
+   PARAGRAPHS
+========================================== */
+
+p{
+
+    
+    color:var(--text-secondary);
+
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a{
+
+    color:var(--link-color);
+
+    transition:color var(--transition-fast);
+
+}
+
+a:hover{
+
+    color:var(--link-hover);
+
+}
+
+/* ==========================================
+   STRONG
+========================================== */
+
+strong{
+
+    font-weight:var(--fw-semibold);
+
+    color:var(--text-primary);
+
+}
+
+/* ==========================================
+   EMPHASIS
+========================================== */
+
+em{
+
+    font-style:italic;
+
+}
+
+/* ==========================================
+   SMALL
+========================================== */
+
+small{
+
+    font-size:var(--fs-body-sm);
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================
+   CAPTION
+========================================== */
+
+.caption{
+
+    font-size:var(--fs-caption);
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================
+   CODE
+========================================== */
+
+code{
+
+    font-family:monospace;
+
+    font-size:.95em;
+
+}
+
+/* ==========================================
+   BLOCKQUOTE
+========================================== */
+
+blockquote{
+
+    border-left:4px solid var(--clr-primary-600);
+
+    padding-left:var(--space-5);
+
+    font-size:var(--fs-body-lg);
+
+    font-style:italic;
+
+    color:var(--text-secondary);
+
+}
+
+
+
+

@@ -1,0 +1,200 @@
+/* ==========================================
+   EXPERTISE
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   EXPERTISE GRID
+========================================== */
+
+.expertise-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0, 1.1fr)
+
+        minmax(20rem, .9fr);
+
+    align-items:start;
+
+    gap:clamp(
+
+        var(--space-10),
+
+        5vw,
+
+        var(--space-20)
+
+    );
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.expertise-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+    max-width:42rem;
+
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.expertise-description{
+
+    max-width:60ch;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   EXPERTISE CARDS
+========================================== */
+
+.expertise-cards{
+
+    display:grid;
+
+    gap:var(--space-5);
+
+    align-content:start;
+
+}
+
+/* ==========================================
+   EXPERTISE CARD
+========================================== */
+
+.expertise-card{
+
+    height:100%;
+
+}
+
+/* ==========================================
+   CARD BODY
+========================================== */
+
+.expertise-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-5);
+
+    height:100%;
+
+}
+
+/* ==========================================
+   EXPERTISE ICON
+========================================== */
+
+.expertise-card-icon{
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================
+   CARD TITLE
+========================================== */
+
+.expertise-card h3{
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-h4);
+
+    line-height:1.2;
+
+}
+
+/* ==========================================
+   CARD DESCRIPTION
+========================================== */
+
+.expertise-card p{
+
+    color:var(--text-secondary);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   EXPERTISE TAGS
+========================================== */
+
+.expertise-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:var(--space-3);
+
+    margin-top:auto;
+
+}
+
+/* ==========================================
+   EXPERTISE TAG
+========================================== */
+
+.expertise-tag{
+
+    transition:
+
+        transform var(--transition-fast),
+
+        background-color var(--transition-fast),
+
+        color var(--transition-fast);
+
+}
+
+.expertise-card:hover .expertise-tag,
+
+.expertise-card:focus-within .expertise-tag{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   RESPONSIVE — TABLET
+========================================== */
+
+@media (max-width:992px){
+
+    .expertise-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .expertise-content{
+
+        max-width:none;
+
+    }
+
+}

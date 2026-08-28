@@ -1,0 +1,154 @@
+/* ==========================================
+   TEACHING
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   TEACHING GRID
+========================================== */
+
+.teaching-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0, 1.1fr)
+
+        minmax(22rem, .9fr);
+
+    align-items:start;
+
+    gap:clamp(
+
+        var(--space-10),
+
+        5vw,
+
+        var(--space-20)
+
+    );
+
+}
+
+/* ==========================================
+   TEACHING CONTENT
+========================================== */
+
+.teaching-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+    max-width:42rem;
+
+}
+
+/* ==========================================
+   TEACHING DESCRIPTION
+========================================== */
+
+.teaching-description{
+
+    max-width:60ch;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   TEACHING CARDS
+========================================== */
+
+.teaching-cards{
+
+    display:grid;
+
+    gap:var(--space-5);
+
+    align-content:start;
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE — TABLET
+========================================== */
+
+@media (max-width:992px){
+
+    .teaching-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .teaching-content{
+
+        max-width:none;
+
+    }
+
+}
+
+/* ==========================================
+   TEACHING CARD
+========================================== */
+
+.teaching-card{
+
+    height:100%;
+
+}
+
+.teaching-card-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-5);
+
+}
+
+/* ==========================================
+   TEACHING CARD BODY
+========================================== */
+
+.teaching-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-3);
+
+}
+
+/* ==========================================
+   TEACHING ICON
+========================================== */
+
+.teaching-icon{
+
+    width:1.5rem;
+
+    height:1.5rem;
+
+}
+
+.teaching-card:hover .card-title,
+
+.teaching-card:focus-within .card-title{
+
+    color:var(--clr-primary-600);
+
+}

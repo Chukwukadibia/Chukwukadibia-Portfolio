@@ -1,0 +1,396 @@
+/* ==========================================
+   PROJECTS
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   PROJECTS GRID
+========================================== */
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(22rem, .9fr);
+
+    align-items:start;
+
+    gap:clamp(
+
+        var(--space-10),
+
+        5vw,
+
+        var(--space-20)
+
+    );
+
+}
+
+/* ==========================================
+   PROJECTS CONTENT
+========================================== */
+
+.projects-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+    max-width:42rem;
+
+}
+
+/* ==========================================
+   PROJECTS DESCRIPTION
+========================================== */
+
+.projects-description{
+
+    max-width:60ch;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   PROJECTS GALLERY
+========================================== */
+
+.projects-gallery{
+
+    display:grid;
+
+    gap:var(--space-6);
+
+    align-content:start;
+
+}
+
+/* ==========================================
+   PROJECT CARD
+========================================== */
+
+.project-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-4);
+
+}
+
+/* ==========================================
+   PROJECT IMAGE
+========================================== */
+
+.project-image{
+
+    position:relative;
+
+    margin:0;
+
+    overflow:hidden;
+
+    border-radius:var(--radius-xl);
+
+    aspect-ratio:16 / 9;
+
+    background:var(--surface-alt);
+
+}
+
+/* ==========================================
+   IMAGE LINK
+========================================== */
+
+.project-image a{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+/* ==========================================
+   PROJECT SCREENSHOT
+========================================== */
+
+.project-image img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+
+        transform var(--transition-medium),
+
+        filter var(--transition-medium);
+
+}
+
+/* ==========================================
+   PROJECT TYPOGRAPHY
+========================================== */
+
+/* ---------- Category ---------- */
+
+.project-category{
+
+    margin:0;
+
+    color:var(--clr-primary-600);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semibold);
+
+    letter-spacing:.06em;
+
+    text-transform:uppercase;
+
+}
+
+/* ---------- Title ---------- */
+
+.project-title{
+
+    margin:0;
+
+    font-size:var(--fs-h4);
+
+    line-height:1.25;
+
+}
+
+.project-title a{
+
+    color:var(--text-primary);
+
+    text-decoration:none;
+
+    transition:color var(--transition-fast);
+
+}
+
+.project-title a:focus-visible{
+
+    outline:none;
+
+}
+
+/* ---------- Description ---------- */
+
+.project-description{
+
+    margin:0;
+
+    color:var(--text-secondary);
+
+    line-height:1.7;
+
+}
+
+/* ==========================================
+   PROJECT FOOTER
+========================================== */
+
+/* ---------- Technology Tags ---------- */
+
+.project-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    gap:var(--space-2);
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+/* ---------- Metadata ---------- */
+
+.project-meta{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:var(--space-2);
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-sm);
+
+    transition:color var(--transition-fast);
+
+}
+
+.project-meta-item{
+
+    white-space:nowrap;
+
+}
+
+.project-meta-separator{
+
+    color:var(--border-default);
+
+    user-select:none;
+
+}
+
+/* ---------- Actions ---------- */
+
+.project-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:var(--space-3);
+
+    margin-top:auto;
+
+}
+
+.project-actions .btn{
+
+    justify-content:center;
+
+}
+
+/* ==========================================
+   PROJECT INTERACTIONS
+========================================== */
+
+/* ---------- Image ---------- */
+
+.project-card:hover .project-image img,
+
+.project-card:focus-within .project-image img{
+
+    transform:scale(1.04);
+
+}
+
+/* ---------- Image Background ---------- */
+
+.project-card:hover .project-image,
+
+.project-card:focus-within .project-image{
+
+    background:var(--surface-hover);
+
+}
+
+/* ---------- Title ---------- */
+
+.project-card:hover .project-title a,
+
+.project-card:focus-within .project-title a{
+
+    color:var(--clr-primary-600);
+
+}
+
+/* ---------- Metadata ---------- */
+
+.project-card:hover .project-meta,
+
+.project-card:focus-within .project-meta{
+
+    color:var(--text-primary);
+
+}
+
+/* ==========================================
+   RESPONSIVE — TABLET
+========================================== */
+
+@media (max-width:992px){
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .projects-content{
+
+        max-width:none;
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE — MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+    .project-actions{
+
+        flex-direction:column;
+
+    }
+
+    .project-actions .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    .project-image img,
+
+    .project-title a,
+
+    .project-meta{
+
+        transition:none;
+
+    }
+
+    .project-card:hover .project-image img,
+
+    .project-card:focus-within .project-image img{
+
+        transform:none;
+
+    }
+
+}

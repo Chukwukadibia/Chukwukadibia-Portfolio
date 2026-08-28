@@ -1,0 +1,120 @@
+/* ==========================================
+   FORM LABEL
+========================================== */
+
+.form-label{
+
+    display:inline-block;
+
+    margin-bottom:var(--space-2);
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semibold);
+
+}
+
+/* ==========================================
+   FORM CONTROL
+========================================== */
+
+.form-control{
+
+    width:100%;
+
+    padding:
+
+        .9rem
+
+        1rem;
+
+    border:1px solid var(--border-default);
+
+    border-radius:var(--radius-lg);
+
+    background:var(--surface-page);
+
+    color:var(--text-primary);
+
+    font:inherit;
+
+    transition:
+
+        border-color var(--transition-fast),
+
+        box-shadow var(--transition-fast),
+
+        background-color var(--transition-fast);
+
+}
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+textarea.form-control{
+
+    min-height:10rem;
+
+    resize:vertical;
+
+}
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+.form-control::placeholder{
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================
+   FORM CONTROL FOCUS
+========================================== */
+
+.form-control:focus{
+
+    outline:none;
+
+    border-color:var(--clr-primary-500);
+
+    box-shadow:
+
+        0 0 0 .25rem
+
+        rgb(
+
+            59 130 246 / 12%
+
+        );
+
+}
+
+/* ==========================================
+   DISABLED
+========================================== */
+
+.form-control:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.7;
+
+    background:var(--surface-alt);
+
+}
+
+/* ==========================================
+   REQUIRED LABEL
+========================================== */
+
+.required::after{
+
+    content:" *";
+
+    color:var(--clr-danger-500);
+}

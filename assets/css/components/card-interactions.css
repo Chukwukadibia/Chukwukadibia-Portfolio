@@ -1,0 +1,78 @@
+/* ==========================================
+   CARD INTERACTIONS
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   CARD LIFT
+========================================== */
+
+.card--interactive{
+
+    transition:
+
+        transform var(--transition-medium),
+
+        box-shadow var(--transition-medium);
+
+}
+
+.card--interactive:hover,
+
+.card--interactive:focus-within{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================================
+   CARD ICON
+========================================== */
+
+.card--interactive .card-icon{
+
+    transition:
+
+        transform var(--transition-medium),
+
+        background-color var(--transition-medium),
+
+        color var(--transition-medium);
+
+}
+
+.card--interactive:hover .card-icon,
+
+.card--interactive:focus-within .card-icon{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    .card--interactive,
+
+    .card--interactive .card-icon{
+
+        transition:none;
+
+    }
+
+    .card--interactive:hover,
+
+    .card--interactive:focus-within,
+
+    .card--interactive:hover .card-icon,
+
+    .card--interactive:focus-within .card-icon{
+
+        transform:none;
+
+    }
+
+}

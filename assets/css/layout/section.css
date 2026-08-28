@@ -1,0 +1,51 @@
+/* ==========================================
+   SECTION
+========================================== */
+
+.section{
+
+    padding-block:
+
+        clamp(
+
+            var(--space-6),
+
+            5vw,
+
+            var(--space-10)
+
+        );
+
+}
+
+.section-sm{
+
+    padding-block:
+
+        clamp(
+
+            var(--space-5),
+
+            4vw,
+
+            var(--space-8)
+
+        );
+
+}
+
+.section-lg{
+
+    padding-block:
+
+        clamp(
+
+            var(--space-8),
+
+            7vw,
+
+            var(--space-12)
+
+        );
+
+}

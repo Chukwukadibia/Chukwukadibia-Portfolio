@@ -1,0 +1,251 @@
+/* ==========================================
+   DESIGN TOKENS
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+:root{
+
+    /* ==========================================
+       COLORS
+    ========================================== */
+
+    /* Primary */
+
+    --clr-primary-50:#eff6ff;
+    --clr-primary-100:#dbeafe;
+    --clr-primary-200:#bfdbfe;
+    --clr-primary-300:#93c5fd;
+    --clr-primary-400:#60a5fa;
+    --clr-primary-500:#3b82f6;
+    --clr-primary-600:#2563eb;
+    --clr-primary-700:#1d4ed8;
+    --clr-primary-800:#1e40af;
+    --clr-primary-900:#1e3a8a;
+    --clr-primary-950:#172554;
+
+    /* Neutral */
+
+    --clr-neutral-0:#ffffff;
+    --clr-neutral-50:#f8fafc;
+    --clr-neutral-100:#f1f5f9;
+    --clr-neutral-200:#e2e8f0;
+    --clr-neutral-300:#cbd5e1;
+    --clr-neutral-400:#94a3b8;
+    --clr-neutral-500:#64748b;
+    --clr-neutral-600:#475569;
+    --clr-neutral-700:#334155;
+    --clr-neutral-800:#1e293b;
+    --clr-neutral-900:#0f172a;
+    --clr-neutral-950:#020617;
+
+    /* Success */
+
+    --clr-success:#10b981;
+
+    /* Warning */
+
+    --clr-warning:#f59e0b;
+
+    /* Danger */
+
+    --clr-danger:#ef4444;
+
+    /* Accent */
+
+    --clr-accent:#06b6d4;
+
+    /* ==========================================
+       TYPOGRAPHY
+    ========================================== */
+
+    --ff-heading:"Space Grotesk",sans-serif;
+    --ff-body:"Inter",sans-serif;
+
+    /* Font Size */
+
+    --fs-display:clamp(3.5rem,7vw,6rem);
+
+    --fs-h1:clamp(2.8rem,5vw,4rem);
+
+    --fs-h2:clamp(2.2rem,4vw,3rem);
+
+    --fs-h3:clamp(1.8rem,3vw,2.4rem);
+
+    --fs-h4:clamp(1.5rem,2vw,2rem);
+
+    --fs-h5:1.25rem;
+
+    --fs-body-lg:1.125rem;
+
+    --fs-body:1rem;
+
+    --fs-body-sm:.9375rem;
+
+    --fs-caption:.8125rem;
+
+    /* Font Weight */
+
+    --fw-regular:400;
+
+    --fw-medium:500;
+
+    --fw-semibold:600;
+
+    --fw-bold:700;
+
+    --fw-extrabold:800;
+
+    /* Line Height */
+
+    --lh-heading:1.2;
+
+    --lh-body:1.7;
+
+    /* Letter Spacing */
+
+    --ls-tight:-0.03em;
+
+    --ls-normal:0;
+
+    --ls-wide:.05em;
+
+    /* ==========================================
+       SPACING
+    ========================================== */
+
+    --space-1:.25rem;
+
+    --space-2:.5rem;
+
+    --space-3:.75rem;
+
+    --space-4:1rem;
+
+    --space-5:1.5rem;
+
+    --space-6:2rem;
+
+    --space-7:2.5rem;
+
+    --space-8:3rem;
+
+    --space-9:4rem;
+
+    --space-10:5rem;
+
+    --space-11:6rem;
+
+    --space-12:8rem;
+
+    
+    /* ==========================================
+       BORDER RADIUS
+    ========================================== */
+
+    --radius-sm:.25rem;
+
+    --radius-md:.5rem;
+
+    --radius-lg:.75rem;
+
+    --radius-xl:1rem;
+
+    --radius-2xl:1.5rem;
+
+    --radius-full:9999px;
+
+    /* ==========================================
+       SHADOWS
+    ========================================== */
+
+    --shadow-sm:
+    0 1px 2px rgba(0,0,0,.08);
+
+    --shadow-md:
+    0 8px 24px rgba(15,23,42,.08);
+
+    --shadow-lg:
+    0 20px 40px rgba(15,23,42,.12);
+
+    /* ==========================================
+       TRANSITIONS
+    ========================================== */
+
+    --transition-fast:150ms ease;
+
+    --transition-normal:300ms ease;
+
+    --transition-slow:500ms ease;
+
+    /* ==========================================
+       Z-INDEX
+    ========================================== */
+
+    --z-dropdown:100;
+
+    --z-sticky:500;
+
+    --z-overlay:900;
+
+    --z-modal:1000;
+
+    --z-tooltip:1100;
+
+    /* ==========================================
+       CONTAINER
+    ========================================== */
+
+    --container-width:1280px;
+
+    --container-padding:1.25rem;
+
+    --content-width:42rem;
+
+    /* ==========================================
+    SEMANTIC TOKENS
+    ========================================== */
+
+--surface-page: var(--clr-neutral-50);
+--surface-card: var(--clr-neutral-0);
+--surface-header: rgba(255,255,255,.8);
+
+--text-primary: var(--clr-neutral-900);
+--text-secondary: var(--clr-neutral-600);
+--text-muted: var(--clr-neutral-500);
+--text-inverse: var(--clr-neutral-0);
+
+--border-color: var(--clr-neutral-200);
+
+--button-primary-bg: var(--clr-primary-600);
+--button-primary-hover: var(--clr-primary-700);
+--button-primary-text: var(--clr-neutral-0);
+
+--link-color: var(--clr-primary-600);
+--link-hover: var(--clr-primary-700);
+
+--focus-ring: var(--clr-accent);
+
+--btn-padding-y: .875rem;
+--btn-padding-x: 1.5rem;
+
+--btn-height: 3rem;
+--btn-radius: .75rem;
+
+
+/* ==========================================
+   BUTTON TOKENS
+========================================== */
+
+--btn-height: 3rem;
+
+--btn-padding-x: 1.5rem;
+
+--btn-padding-y: .875rem;
+
+--btn-radius: .75rem;
+
+--btn-gap: .5rem;
+
+--surface-hover:rgba(15, 23, 42, 0.06);
+}
+

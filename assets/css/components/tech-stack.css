@@ -1,0 +1,188 @@
+/* ==========================================
+   TECH STACK
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   TECH STACK GRID
+========================================== */
+
+.tech-stack-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0, 1.1fr)
+
+        minmax(20rem, .9fr);
+
+    align-items:start;
+
+    gap:clamp(
+
+        var(--space-10),
+
+        5vw,
+
+        var(--space-20)
+
+    );
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.tech-stack-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+    max-width:42rem;
+
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.tech-stack-description{
+
+    max-width:60ch;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   TECH STACK GROUPS
+========================================== */
+
+.tech-stack-groups{
+
+    display:grid;
+
+    gap:var(--space-5);
+
+    align-content:start;
+
+}
+
+/* ==========================================
+   TECH GROUP
+========================================== */
+
+.tech-group{
+
+    height:100%;
+
+}
+
+/* ==========================================
+   CARD BODY
+========================================== */
+
+.tech-group .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-5);
+
+    height:100%;
+
+}
+
+/* ==========================================
+   TECH GROUP ICON
+========================================== */
+
+.tech-group-icon{
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================
+   GROUP TITLE
+========================================== */
+
+.tech-group h3{
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-h4);
+
+    line-height:1.2;
+
+}
+
+/* ==========================================
+   TECHNOLOGY TAGS
+========================================== */
+
+.tech-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:var(--space-3);
+
+    margin-top:auto;
+
+}
+
+/* ==========================================
+   TECH TAG
+========================================== */
+
+.tech-tag{
+
+    transition:
+
+        transform var(--transition-fast),
+
+        background-color var(--transition-fast),
+
+        color var(--transition-fast);
+
+}
+
+.tech-group:hover .tech-tag,
+
+.tech-group:focus-within .tech-tag{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   RESPONSIVE — TABLET
+========================================== */
+
+@media (max-width:992px){
+
+    .tech-stack-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .tech-stack-content{
+
+        max-width:none;
+
+    }
+
+}

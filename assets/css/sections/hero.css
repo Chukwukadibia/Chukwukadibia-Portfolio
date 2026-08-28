@@ -1,0 +1,606 @@
+/* ==========================================
+   HERO
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero-section{
+
+    display:flex;
+
+    align-items:center;
+
+    min-height:100svh;
+
+    overflow:hidden;
+
+    padding-block:
+        calc(
+            var(--header-height)
+            + var(--space-16)
+        )
+        var(--space-16);
+
+}
+
+/* ==========================================
+   HERO GRID
+========================================== */
+
+.hero-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(320px, .8fr);
+
+    align-items:center;
+
+    gap:clamp(
+        var(--space-10),
+        5vw,
+        var(--space-20)
+    );
+
+}
+
+/* ==========================================
+   HERO COPY
+========================================== */
+
+.hero-copy{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:var(--space-6);
+
+    max-width:42rem;
+
+}
+
+/* ==========================================
+   HERO MEDIA
+========================================== */
+
+.hero-media{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    align-self:stretch;
+
+}
+
+/* ==========================================
+   HERO PHOTO
+========================================== */
+
+.hero-photo{
+
+    position:relative;
+
+    width:min(100%, 28rem);
+
+    margin:0;
+
+    border-radius:var(--radius-2xl);
+
+    overflow:hidden;
+
+    isolation:isolate;
+
+}
+
+/* ==========================================
+   PHOTO DECORATION
+========================================== */
+
+.hero-photo::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    background:linear-gradient(
+        180deg,
+        rgba(37,99,235,.04),
+        rgba(37,99,235,.08)
+    );
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+   HERO IMAGE
+========================================== */
+
+.hero-image{
+
+    position:relative;
+
+    z-index:1;
+
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    object-fit:cover;
+
+}
+
+/* ==========================================
+   PROFILE STATUS
+========================================== */
+
+.profile-status{
+
+    position:absolute;
+
+    top:var(--space-5);
+
+    right:var(--space-5);
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-2);
+
+    padding:
+        .55rem
+        .9rem;
+
+    border-radius:999rem;
+
+    background:rgba(255,255,255,.92);
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-xs);
+
+    font-weight:var(--fw-medium);
+
+    white-space:nowrap;
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+}
+
+/* ==========================================
+   STATUS DOT
+========================================== */
+
+.status-dot{
+
+    width:.55rem;
+
+    aspect-ratio:1;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+}
+
+/* ==========================================
+   PROFILE BADGE
+========================================== */
+
+.profile-badge{
+
+    position:absolute;
+
+    left:var(--space-5);
+
+    bottom:var(--space-5);
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.2rem;
+
+    min-width:10rem;
+
+    padding:
+        1rem
+        1.2rem;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--surface-page);
+
+}
+
+.profile-badge strong{
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1;
+
+}
+
+.profile-badge span{
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-sm);
+
+}
+
+/* ==========================================
+   PROFILE DECORATION
+========================================== */
+
+.profile-shape{
+
+    position:absolute;
+
+    top:-2rem;
+
+    left:-2rem;
+
+    width:8rem;
+
+    aspect-ratio:1;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--clr-primary-600);
+
+    opacity:.04;
+
+    transform:rotate(18deg);
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+   HERO EYEBROW
+========================================== */
+
+.hero-eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:var(--space-2);
+
+    color:var(--clr-primary-600);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semibold);
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+   HERO TITLE
+========================================== */
+
+.hero-title{
+
+    max-width:12ch;
+
+    color:var(--text-primary);
+
+    font-family:var(--ff-heading);
+
+    font-size:clamp(
+        2.75rem,
+        5vw,
+        5rem
+    );
+
+    font-weight:var(--fw-bold);
+
+    line-height:1.05;
+
+    letter-spacing:-0.04em;
+
+    text-wrap:balance;
+
+}
+
+/* ==========================================
+   HERO DESCRIPTION
+========================================== */
+
+.hero-description{
+
+    max-width:60ch;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   HERO HIGHLIGHTS
+========================================== */
+
+.hero-highlights{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:var(--space-5);
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.hero-highlights li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-2);
+
+    color:var(--text-secondary);
+
+    font-weight:var(--fw-medium);
+
+}
+
+.hero-highlights strong{
+
+    color:var(--text-primary);
+
+}
+
+/* ==========================================
+   HERO ACTIONS
+========================================== */
+
+.hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+    gap:var(--space-4);
+
+}
+
+.hero-actions .btn{
+
+    min-width:12rem;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   HERO SOCIAL LINKS
+========================================== */
+
+.hero-socials{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-6);
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.hero-socials a{
+
+    color:var(--text-secondary);
+
+    text-decoration:none;
+
+    font-weight:var(--fw-medium);
+
+    transition:color var(--transition-fast);
+
+}
+
+.hero-socials a:hover,
+
+.hero-socials a:focus-visible{
+
+    color:var(--clr-primary-600);
+
+}
+
+.hero-socials a:focus-visible{
+
+    outline:none;
+
+}
+
+/* ==========================================
+   RESPONSIVE — TABLET
+========================================== */
+
+@media (max-width:992px){
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-copy{
+
+        align-items:center;
+
+        text-align:center;
+
+        max-width:none;
+
+    }
+
+    .hero-title,
+
+    .hero-description{
+
+        max-width:none;
+
+    }
+
+    .hero-highlights,
+
+    .hero-actions,
+
+    .hero-socials{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE — MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+    .hero-section{
+
+        min-height:auto;
+
+        padding-block:
+            calc(
+                var(--header-height)
+                + var(--space-12)
+            )
+            var(--space-12);
+
+    }
+
+    .hero-photo{
+
+        width:min(100%, 24rem);
+
+    }
+
+    .profile-status{
+
+        top:var(--space-4);
+
+        right:var(--space-4);
+
+    }
+
+    .profile-badge{
+
+        left:var(--space-4);
+
+        bottom:var(--space-4);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE — SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+    .hero-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .hero-actions .btn{
+
+        width:100%;
+
+    }
+
+}
+
+@media (max-width:360px){
+
+    .hero-actions{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .hero-socials a{
+
+        transition:none;
+
+    }
+
+}

@@ -1,0 +1,94 @@
+/* ==========================================
+   HEADER
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   HEADER TOKENS
+========================================== */
+
+:root{
+
+    --header-height:5rem;
+
+    --header-height-scrolled:4.5rem;
+
+    --header-blur:14px;
+
+    --header-shadow:var(--shadow-sm);
+
+}
+
+/* ==========================================
+   SITE HEADER
+========================================== */
+
+.site-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    width:100%;
+
+    min-height:var(--header-height);
+
+    background:transparent;
+
+    isolation:isolate;
+
+    transition:
+
+        min-height var(--transition-fast),
+
+        background-color var(--transition-fast),
+
+        backdrop-filter var(--transition-fast),
+
+        box-shadow var(--transition-fast);
+
+}
+
+/* ==========================================
+   HEADER CONTAINER
+========================================== */
+
+.site-header > .container{
+
+    min-height:inherit;
+
+}
+
+/* ==========================================
+   SCROLLED STATE
+========================================== */
+
+.site-header.scrolled{
+
+    min-height:var(--header-height-scrolled);
+
+    background-color:rgb(255 255 255 / .82);
+
+    backdrop-filter:blur(var(--header-blur));
+
+    -webkit-backdrop-filter:blur(var(--header-blur));
+
+    box-shadow:var(--header-shadow);
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    .site-header{
+
+        transition:none;
+
+    }
+
+}

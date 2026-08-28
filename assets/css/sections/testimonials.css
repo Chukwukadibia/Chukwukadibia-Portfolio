@@ -1,0 +1,279 @@
+/* ==========================================
+   TESTIMONIALS
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   TESTIMONIALS CONTENT
+========================================== */
+
+.testimonials-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-6);
+
+    max-width:42rem;
+
+    margin-inline:auto;
+
+    text-align:center;
+
+}
+
+/* ==========================================
+   TESTIMONIALS DESCRIPTION
+========================================== */
+
+.testimonials-description{
+
+    max-width:60ch;
+
+    margin-inline:auto;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-lg);
+
+    line-height:1.75;
+
+}
+
+/* ==========================================
+   TESTIMONIALS GRID
+========================================== */
+
+.testimonials-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(
+
+            auto-fit,
+
+            minmax(22rem,1fr)
+
+        );
+
+    gap:var(--space-6);
+
+    margin-top:var(--space-12);
+
+}
+
+/* ==========================================
+   TESTIMONIAL CARD
+========================================== */
+
+.testimonial-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+/* ==========================================
+   CARD BODY
+========================================== */
+
+.testimonial-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-4);
+
+    flex:1;
+
+}
+
+/* ==========================================
+   TESTIMONIAL RATING
+========================================== */
+
+.testimonial-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.35rem;
+
+    margin-bottom:var(--space-5);
+
+    color:#F59E0B;
+
+}
+
+/* ==========================================
+   RATING STAR
+========================================== */
+
+.rating-star{
+
+    width:1rem;
+
+    height:1rem;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================
+   TESTIMONIAL QUOTE
+========================================== */
+
+.testimonial-quote{
+
+    position:relative;
+
+    margin:0;
+
+    padding-left:3rem;
+
+    padding-top: 2rem;
+
+}
+
+/* ==========================================
+   QUOTE ICON
+========================================== */
+
+.testimonial-quote-icon{
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    color:var(--clr-primary-100);
+
+    pointer-events:none;
+
+    user-select:none;
+
+    color:var(--clr-primary-100);
+
+    opacity:.55;
+
+}
+
+/* ==========================================
+   QUOTE SVG
+========================================== */
+
+.testimonial-quote-icon-svg{
+
+    width:3.5rem;
+
+    height:3.5rem;
+
+}
+
+/* ==========================================
+   TESTIMONIAL TEXT
+========================================== */
+
+.testimonial-text{
+
+    position:relative;
+
+    z-index:1;
+
+    margin:0;
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   TESTIMONIAL AUTHOR
+========================================== */
+
+.testimonial-author{
+
+    margin-top:auto;
+
+    padding-top:var(--space-6);
+
+}
+
+/* ==========================================
+   TESTIMONIAL PERSON
+========================================== */
+
+.testimonial-person{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-4);
+
+    margin:0;
+
+}
+
+/* ==========================================
+   TESTIMONIAL CAPTION
+========================================== */
+
+.testimonial-person figcaption{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.15rem;
+
+}
+
+.testimonial-person strong{
+
+    color:var(--text-primary);
+
+}
+
+.testimonial-person span{
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-sm);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .testimonials-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .testimonial-quote-icon-svg{
+
+        width:3rem;
+
+        height:3rem;
+
+    }
+
+}

@@ -1,0 +1,180 @@
+/* ==========================================
+   BASE
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   HTML
+========================================== */
+
+html {
+
+    font-size: 100%;
+    scrollbar-gutter: stable;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+
+    background-color: var(--surface-page);
+
+    color: var(--text-primary);
+
+    font-family: var(--ff-body);
+
+    font-size: var(--fs-body);
+
+    font-weight: var(--fw-regular);
+
+    line-height: var(--lh-body);
+
+}
+
+/* ==========================================
+   SITE WRAPPER
+========================================== */
+
+.site-wrapper {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    isolation: isolate;
+
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+main {
+
+    flex: 1;
+
+}
+
+/* ==========================================
+   MEDIA
+========================================== */
+
+img {
+
+    height: auto;
+
+}
+
+svg {
+
+    display: block;
+
+}
+
+iframe {
+
+    border: 0;
+
+}
+
+/* ==========================================
+   HORIZONTAL RULE
+========================================== */
+
+hr {
+
+    border: none;
+
+    border-top: 1px solid var(--border-color);
+
+    margin-block: var(--space-8);
+
+}
+
+button,
+a,
+input,
+textarea,
+select {
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        opacity var(--transition-fast),
+        transform var(--transition-fast);
+
+}
+
+/* ==========================================
+   FOCUS
+========================================== */
+
+:focus-visible {
+
+    outline: 3px solid var(--focus-ring);
+
+    outline-offset: 4px;
+
+    border-radius: var(--radius-sm);
+
+}
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection {
+
+    background: var(--clr-primary-600);
+
+    color: var(--clr-neutral-0);
+
+}
+
+/* ==========================================
+   PLACEHOLDER
+========================================== */
+
+::placeholder {
+
+    color: var(--text-muted);
+
+    opacity: 1;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: var(--clr-neutral-100);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--clr-neutral-400);
+
+    border-radius: var(--radius-full);
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--clr-primary-600);
+
+}

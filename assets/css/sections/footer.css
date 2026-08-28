@@ -1,0 +1,356 @@
+/* ==========================================
+   FOOTER
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer{
+
+    padding:
+
+        var(--space-20)
+
+        0
+
+        var(--space-8);
+
+    border-top:1px solid var(--border-default);
+
+    background:var(--surface-alt);
+
+}
+
+/* ==========================================
+   FOOTER TOP
+========================================== */
+
+.footer-top{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0,1.4fr)
+
+        minmax(14rem,.8fr);
+
+    align-items:start;
+
+    gap:clamp(
+
+        var(--space-10),
+
+        6vw,
+
+        var(--space-20)
+
+    );
+
+}
+
+/* ==========================================
+   FOOTER BRAND
+========================================== */
+
+.footer-brand{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-5);
+
+    max-width:36rem;
+
+}
+
+/* ==========================================
+   FOOTER NAVIGATION
+========================================== */
+
+.footer-nav{
+
+    justify-self:end;
+
+}
+
+/* ==========================================
+   FOOTER BOTTOM
+========================================== */
+
+.footer-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-6);
+
+    margin-top:var(--space-16);
+
+    padding-top:var(--space-8);
+
+    border-top:1px solid var(--border-default);
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .footer-top{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-nav{
+
+        justify-self:start;
+
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+/* ==========================================
+   FOOTER NAVIGATION TITLE
+========================================== */
+
+.footer-nav-title{
+
+    margin:0 0 var(--space-5);
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-base);
+
+    font-weight:var(--fw-semibold);
+
+}
+
+/* ==========================================
+   FOOTER MENU
+========================================== */
+
+.footer-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:var(--space-3);
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+/* ==========================================
+   FOOTER LINK
+========================================== */
+
+.footer-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    color:var(--text-secondary);
+
+    text-decoration:none;
+
+    transition:
+
+        color var(--transition-fast);
+
+}
+
+/* ==========================================
+   FOOTER LINK INTERACTION
+========================================== */
+
+.footer-link:hover,
+
+.footer-link:focus-visible{
+
+    color:var(--clr-primary-600);
+
+}
+
+.footer-link:focus-visible{
+
+    outline:2px solid var(--clr-primary-500);
+
+    outline-offset:.3rem;
+
+    border-radius:var(--radius-sm);
+
+}
+
+/* ==========================================
+   FOOTER LOGO
+========================================== */
+
+.footer-logo{
+
+    margin:0;
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-h4);
+
+    font-weight:var(--fw-bold);
+
+    line-height:1.2;
+
+}
+
+/* ==========================================
+   FOOTER DESCRIPTION
+========================================== */
+
+.footer-description{
+
+    margin:0;
+
+    max-width:40ch;
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   FOOTER SOCIAL
+========================================== */
+
+.footer-brand .social-links{
+
+    margin-top:var(--space-2);
+
+}
+
+/* ==========================================
+   FOOTER COPYRIGHT
+========================================== */
+
+.footer-copyright{
+
+    margin:0;
+
+    color:var(--text-secondary);
+
+    font-size:var(--fs-sm);
+
+}
+
+/* ==========================================
+   BACK TO TOP
+========================================== */
+
+.back-to-top{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:var(--space-2);
+
+    color:var(--text-secondary);
+
+    text-decoration:none;
+
+    font-weight:var(--fw-medium);
+
+    transition:
+
+        color var(--transition-fast);
+
+}
+
+/* ==========================================
+   BACK TO TOP ICON
+========================================== */
+
+.back-to-top-icon{
+
+    width:1rem;
+
+    height:1rem;
+
+    flex-shrink:0;
+
+    transition:
+
+        transform var(--transition-medium);
+
+}
+
+/* ==========================================
+   BACK TO TOP INTERACTION
+========================================== */
+
+.back-to-top:hover,
+
+.back-to-top:focus-visible{
+
+    color:var(--clr-primary-600);
+
+}
+
+.back-to-top:hover .back-to-top-icon,
+
+.back-to-top:focus-visible .back-to-top-icon{
+
+    transform:
+
+        translateY(-.2rem);
+
+}
+
+.back-to-top:focus-visible{
+
+    outline:2px solid var(--clr-primary-500);
+
+    outline-offset:.35rem;
+
+    border-radius:var(--radius-sm);
+
+}
+
+.footer-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:var(--space-6);
+
+    margin-top:var(--space-16);
+
+    padding-top:var(--space-8);
+
+    border-top:1px solid var(--border-default);
+
+}

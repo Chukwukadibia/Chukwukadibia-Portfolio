@@ -1,0 +1,492 @@
+/* ==========================================
+   NAVIGATION
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    min-height:inherit;
+
+    gap:var(--space-6);
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.08em;
+
+    flex-shrink:0;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:
+
+        color var(--transition-fast);
+
+}
+
+.logo-text{
+
+    color:var(--text-primary);
+
+    font-size:var(--fs-h4);
+
+    font-weight:var(--fw-bold);
+
+    letter-spacing:-.03em;
+
+    transition:color var(--transition-fast);
+
+}
+
+.logo-dot{
+
+    color:var(--clr-primary-600);
+
+    transition:
+
+        transform var(--transition-medium),
+
+        color var(--transition-fast);
+
+}
+
+.logo:hover .logo-text,
+
+.logo:focus-visible .logo-text{
+
+    color:var(--clr-primary-600);
+
+}
+
+.logo:hover .logo-dot,
+
+.logo:focus-visible .logo-dot{
+
+    transform:scale(1.25);
+
+}
+
+.logo:focus-visible{
+
+    outline:2px solid var(--clr-primary-500);
+
+    outline-offset:.35rem;
+
+    border-radius:var(--radius-sm);
+
+}
+
+/* ==========================================
+   NAVIGATION MENU
+========================================== */
+
+.nav-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-8);
+
+    margin-left:auto;
+
+}
+
+/* ==========================================
+   NAVIGATION LIST
+========================================== */
+
+.nav-list{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:clamp(
+
+        var(--space-5),
+
+        2vw,
+
+        var(--space-8)
+
+    );
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+/* ==========================================
+   NAVIGATION ITEM
+========================================== */
+
+.nav-item{
+
+    margin:0;
+
+}
+
+/* ==========================================
+   NAVIGATION LINK
+========================================== */
+
+.nav-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding-block:.5rem;
+
+    text-decoration:none;
+
+    color:var(--text-secondary);
+
+    font-weight:var(--fw-medium);
+
+    transition:
+
+        color var(--transition-fast);
+
+}
+
+.nav-link:hover,
+
+.nav-link:focus-visible{
+
+    color:var(--clr-primary-600);
+
+}
+
+.nav-link:focus-visible{
+
+    outline:none;
+
+}
+
+/* ==========================================
+   LINK UNDERLINE
+========================================== */
+
+.nav-link-text{
+
+    position:relative;
+
+}
+
+.nav-link-text::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-.35rem;
+
+    width:100%;
+
+    height:2px;
+
+    background:var(--clr-primary-600);
+
+    transform:scaleX(0);
+
+    transform-origin:right;
+
+    transition:transform var(--transition-fast);
+
+}
+
+.nav-link:hover .nav-link-text::after,
+
+.nav-link:focus-visible .nav-link-text::after,
+
+.nav-link[aria-current="page"] .nav-link-text::after{
+
+    transform:scaleX(1);
+
+    transform-origin:left;
+
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+.nav-cta{
+
+    margin-left:var(--space-4);
+
+    flex-shrink:0;
+
+}
+
+/* ==========================================
+   NAVIGATION TOGGLE
+========================================== */
+
+.nav-toggle{
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:3rem;
+
+    aspect-ratio:1;
+
+    padding:0;
+
+    border:none;
+
+    border-radius:var(--radius-md);
+
+    background:transparent;
+
+    color:var(--text-primary);
+
+    cursor:pointer;
+
+    transition:
+
+        background-color var(--transition-fast),
+
+        color var(--transition-fast),
+
+        transform var(--transition-fast);
+
+}
+
+.nav-toggle:hover{
+
+    background:var(--surface-hover);
+
+    color:var(--clr-primary-600);
+
+}
+
+.nav-toggle:focus-visible{
+
+    outline:none;
+
+    background:var(--surface-hover);
+
+    color:var(--clr-primary-600);
+
+    box-shadow:0 0 0 3px var(--clr-primary-300);
+
+}
+
+.nav-toggle:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================================
+   TOGGLE ICON
+========================================== */
+
+.nav-toggle-icon{
+
+    width:1.5rem;
+
+    height:1.5rem;
+
+}
+
+.line{
+
+    fill:none;
+
+    stroke:currentColor;
+
+    stroke-width:2.5;
+
+    stroke-linecap:round;
+
+    vector-effect:non-scaling-stroke;
+
+    transform-origin:center;
+
+    transition:
+
+        transform .28s cubic-bezier(.4,0,.2,1),
+
+        opacity .18s ease;
+
+}
+
+/* ==========================================
+   TOGGLE OPEN STATE
+========================================== */
+
+.nav-toggle.is-active .line-top{
+
+    transform:translateY(6px) rotate(45deg);
+
+}
+
+.nav-toggle.is-active .line-middle{
+
+    opacity:0;
+
+}
+
+.nav-toggle.is-active .line-bottom{
+
+    transform:translateY(-6px) rotate(-45deg);
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+    .nav-toggle{
+
+        display:flex;
+
+        z-index:1100;
+
+    }
+
+    .nav-menu{
+
+        position:fixed;
+
+        inset:0;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:var(--space-10);
+
+        padding:max(var(--space-8), env(safe-area-inset-top));
+
+        margin:0;
+
+        background:rgb(255 255 255 / .96);
+
+        backdrop-filter:blur(18px);
+
+        -webkit-backdrop-filter:blur(18px);
+
+        visibility:hidden;
+
+        opacity:0;
+
+        transform:translateX(100%);
+
+        transition:
+
+            opacity var(--transition-medium),
+
+            transform var(--transition-medium),
+
+            visibility var(--transition-medium);
+
+    }
+
+    .nav-menu.is-open{
+
+        visibility:visible;
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+    .nav-list{
+
+        flex-direction:column;
+
+        gap:var(--space-8);
+
+    }
+
+    .nav-link{
+
+        font-size:var(--fs-h3);
+
+    }
+
+    .nav-cta{
+
+        margin-left:0;
+
+    }
+
+}
+
+/* ==========================================
+   BODY STATE
+========================================== */
+
+body.menu-open{
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    .logo,
+
+    .logo-dot,
+
+    .nav-link,
+
+    .nav-link-text::after,
+
+    .nav-menu,
+
+    .nav-toggle,
+
+    .line{
+
+        transition:none;
+
+    }
+
+}
