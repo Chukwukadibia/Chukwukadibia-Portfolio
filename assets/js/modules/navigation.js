@@ -98,6 +98,14 @@ function bindEvents(nav) {
 
     });
 
+    nav.menu.addEventListener("click", (event) => {
+
+        if (event.target !== nav.menu) return;
+
+        closeMenu(nav);
+
+    });
+
     window.addEventListener("resize", () => {
 
         handleResize(nav);
