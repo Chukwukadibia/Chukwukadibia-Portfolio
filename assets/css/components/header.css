@@ -35,7 +35,13 @@
 
     min-height:var(--header-height);
 
-    background:transparent;
+    background:var(--surface-header);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    border-bottom:1px solid var(--border-color);
 
     isolation:isolate;
 
@@ -74,6 +80,8 @@
     backdrop-filter:blur(var(--header-blur));
 
     -webkit-backdrop-filter:blur(var(--header-blur));
+
+    border-bottom-color:transparent;
 
     box-shadow:var(--header-shadow);
 
