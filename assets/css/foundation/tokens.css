@@ -49,6 +49,7 @@
     /* Danger */
 
     --clr-danger:#ef4444;
+    --clr-danger-500:var(--clr-danger);
 
     /* Accent */
 
@@ -82,6 +83,13 @@
     --fs-body-sm:.9375rem;
 
     --fs-caption:.8125rem;
+
+    /* Short-name aliases used across section files */
+
+    --fs-base:var(--fs-body);
+    --fs-lg:var(--fs-body-lg);
+    --fs-sm:var(--fs-body-sm);
+    --fs-xs:var(--fs-caption);
 
     /* Font Weight */
 
@@ -137,6 +145,13 @@
 
     --space-12:8rem;
 
+    /* Tailwind-numbered steps (n x 0.25rem) referenced in section files */
+
+    --space-14:3.5rem;
+    --space-16:4rem;
+    --space-20:5rem;
+    --space-24:6rem;
+
     
     /* ==========================================
        BORDER RADIUS
@@ -177,6 +192,8 @@
 
     --transition-slow:500ms ease;
 
+    --transition-medium:var(--transition-normal);
+
     /* ==========================================
        Z-INDEX
     ========================================== */
@@ -207,6 +224,7 @@
 
 --surface-page: var(--clr-neutral-50);
 --surface-card: var(--clr-neutral-0);
+--surface-alt: var(--clr-neutral-100);
 --surface-header: rgba(255,255,255,.8);
 
 --text-primary: var(--clr-neutral-900);
@@ -215,6 +233,7 @@
 --text-inverse: var(--clr-neutral-0);
 
 --border-color: var(--clr-neutral-200);
+--border-default: var(--border-color);
 
 --button-primary-bg: var(--clr-primary-600);
 --button-primary-hover: var(--clr-primary-700);
@@ -230,20 +249,6 @@
 
 --btn-height: 3rem;
 --btn-radius: .75rem;
-
-
-/* ==========================================
-   BUTTON TOKENS
-========================================== */
-
---btn-height: 3rem;
-
---btn-padding-x: 1.5rem;
-
---btn-padding-y: .875rem;
-
---btn-radius: .75rem;
-
 --btn-gap: .5rem;
 
 --surface-hover:rgba(15, 23, 42, 0.06);
