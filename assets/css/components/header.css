@@ -35,6 +35,43 @@
 
     min-height:var(--header-height);
 
+    isolation:isolate;
+
+    transition:
+
+        min-height var(--transition-fast),
+
+        box-shadow var(--transition-fast);
+
+}
+
+/* ==========================================
+   HEADER BACKGROUND LAYER
+
+   Deliberately a ::before pseudo-element rather than a property
+   directly on .site-header. backdrop-filter (like transform, filter,
+   perspective, contain) creates a new containing block for any
+   position:fixed descendant. .nav-menu (the mobile nav overlay) is a
+   descendant of .site-header and relies on position:fixed being
+   relative to the viewport. Putting backdrop-filter directly on
+   .site-header silently retargeted .nav-menu's "fixed" positioning to
+   .site-header's own small box instead of the viewport, which is why
+   the mobile menu rendered squeezed into the header area and drifted
+   with scroll instead of staying pinned full-screen. Isolating the
+   blur to a pseudo-element keeps the identical visual effect without
+   .site-header itself becoming a containing-block-creating ancestor.
+========================================== */
+
+.site-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:-1;
+
     background:var(--surface-header);
 
     backdrop-filter:blur(10px);
@@ -43,17 +80,13 @@
 
     border-bottom:1px solid var(--border-color);
 
-    isolation:isolate;
-
     transition:
-
-        min-height var(--transition-fast),
 
         background-color var(--transition-fast),
 
         backdrop-filter var(--transition-fast),
 
-        box-shadow var(--transition-fast);
+        border-color var(--transition-fast);
 
 }
 
@@ -75,6 +108,12 @@
 
     min-height:var(--header-height-scrolled);
 
+    box-shadow:var(--header-shadow);
+
+}
+
+.site-header.scrolled::before{
+
     background-color:rgb(255 255 255 / .82);
 
     backdrop-filter:blur(var(--header-blur));
@@ -82,8 +121,6 @@
     -webkit-backdrop-filter:blur(var(--header-blur));
 
     border-bottom-color:transparent;
-
-    box-shadow:var(--header-shadow);
 
 }
 
@@ -93,7 +130,9 @@
 
 @media (prefers-reduced-motion: reduce){
 
-    .site-header{
+    .site-header,
+
+    .site-header::before{
 
         transition:none;
 
