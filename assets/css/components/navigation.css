@@ -383,11 +383,19 @@
 
     .nav-menu{
 
+        display:none;
+
         position:fixed;
 
-        inset:0;
+        top:0;
 
-        display:flex;
+        left:0;
+
+        right:0;
+
+        bottom:0;
+
+        z-index:1050;
 
         flex-direction:column;
 
@@ -401,35 +409,23 @@
 
         margin:0;
 
-        background:rgb(255 255 255 / .96);
+        background-color:rgb(255 255 255 / .96);
 
         backdrop-filter:blur(18px);
 
         -webkit-backdrop-filter:blur(18px);
 
-        visibility:hidden;
-
         opacity:0;
 
-        transform:translateX(100%);
-
-        transition:
-
-            opacity var(--transition-medium),
-
-            transform var(--transition-medium),
-
-            visibility var(--transition-medium);
+        transition:opacity var(--transition-medium);
 
     }
 
     .nav-menu.is-open{
 
-        visibility:visible;
+        display:flex;
 
         opacity:1;
-
-        transform:translateX(0);
 
     }
 
