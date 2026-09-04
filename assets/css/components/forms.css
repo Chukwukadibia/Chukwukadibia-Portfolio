@@ -118,3 +118,116 @@ textarea.form-control{
 
     color:var(--clr-danger-500);
 }
+
+/* ==========================================
+   INVALID FIELD
+========================================== */
+
+.form-control[aria-invalid="true"]{
+
+    border-color:var(--clr-danger-500);
+
+}
+
+.form-control[aria-invalid="true"]:focus{
+
+    border-color:var(--clr-danger-500);
+
+    box-shadow:
+        0 0 0 .25rem
+        rgb(
+            239 68 68 / 12%
+        );
+
+}
+
+/* ==========================================
+   FIELD ERROR MESSAGE
+========================================== */
+
+.form-error{
+
+    display:none;
+
+    margin:
+        var(--space-2)
+        0
+        0;
+
+    color:var(--clr-danger-500);
+
+    font-size:var(--fs-sm);
+
+}
+
+.form-error:not(:empty){
+
+    display:block;
+
+}
+
+/* ==========================================
+   FORM STATUS BANNER
+========================================== */
+
+.form-status{
+
+    display:none;
+
+    padding:var(--space-4);
+
+    border-radius:var(--radius-lg);
+
+    font-size:var(--fs-sm);
+
+    font-weight:var(--fw-semibold);
+
+}
+
+.form-status:not(:empty){
+
+    display:block;
+
+    margin-bottom:var(--space-6);
+
+}
+
+.form-status.form-status--success{
+
+    background:rgb(16 185 129 / 10%);
+
+    color:var(--clr-success);
+
+    border:1px solid rgb(16 185 129 / 30%);
+
+}
+
+.form-status.form-status--error{
+
+    background:rgb(239 68 68 / 10%);
+
+    color:var(--clr-danger-500);
+
+    border:1px solid rgb(239 68 68 / 30%);
+
+}
+
+/* ==========================================
+   HONEYPOT (spam trap, hidden from real users)
+========================================== */
+
+.form-honeypot{
+
+    position:absolute;
+
+    width:1px;
+
+    height:1px;
+
+    overflow:hidden;
+
+    clip:rect(0 0 0 0);
+
+    white-space:nowrap;
+
+}

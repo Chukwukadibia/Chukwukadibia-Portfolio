@@ -2430,9 +2430,32 @@
 
                         <form
                             class="contact-form"
-                            action="#"
+                            name="contact"
+                            action="/"
                             method="post"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
                             novalidate>
+
+                            <input type="hidden" name="form-name" value="contact">
+
+                            <p class="form-honeypot">
+                                <label for="bot-field">
+                                    Leave this field blank
+                                </label>
+                                <input
+                                    type="text"
+                                    id="bot-field"
+                                    name="bot-field"
+                                    tabindex="-1"
+                                    autocomplete="off">
+                            </p>
+
+                            <div
+                                class="form-status"
+                                role="status"
+                                aria-live="polite">
+                            </div>
 
                             <div class="form-row">
 
@@ -2453,7 +2476,14 @@
                                         name="name"
                                         autocomplete="name"
                                         placeholder="John Doe"
+                                        aria-describedby="name-error"
                                         required>
+
+                                    <p
+                                        class="form-error"
+                                        id="name-error"
+                                        role="alert">
+                                    </p>
 
                                 </div>
 
@@ -2474,7 +2504,14 @@
                                         name="email"
                                         autocomplete="email"
                                         placeholder="john@example.com"
+                                        aria-describedby="email-error"
                                         required>
+
+                                    <p
+                                        class="form-error"
+                                        id="email-error"
+                                        role="alert">
+                                    </p>
 
                                 </div>
 
@@ -2516,7 +2553,14 @@
                                     name="message"
                                     rows="6"
                                     placeholder="Tell me about your project..."
+                                    aria-describedby="message-error"
                                     required></textarea>
+
+                                <p
+                                    class="form-error"
+                                    id="message-error"
+                                    role="alert">
+                                </p>
 
                             </div>
 
