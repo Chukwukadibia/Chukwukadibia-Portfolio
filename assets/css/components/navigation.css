@@ -455,7 +455,7 @@
    BODY STATE
 ========================================== */
 
-body.menu-open{
+html.menu-open{
 
     overflow:hidden;
 

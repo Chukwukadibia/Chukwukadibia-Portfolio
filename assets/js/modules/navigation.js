@@ -67,7 +67,7 @@ function createNavigation() {
 
         firstLink,
 
-        body: document.body
+        html: document.documentElement
 
     };
 
@@ -221,7 +221,7 @@ function openMenu(nav) {
 
     nav.menu.setAttribute("aria-hidden", "false");
 
-    nav.body.classList.add("menu-open");
+    nav.html.classList.add("menu-open");
 
     nav.toggle.classList.add("is-active");
 
@@ -246,7 +246,7 @@ function closeMenu(nav) {
 
     nav.menu.setAttribute("aria-hidden", "true");
 
-    nav.body.classList.remove("menu-open");
+    nav.html.classList.remove("menu-open");
 
     nav.toggle.classList.remove("is-active");
 
