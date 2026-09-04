@@ -1,0 +1,75 @@
+/* ==========================================
+   ANIMATIONS
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+/* ==========================================
+   SCROLL REVEAL (default / no-JS state)
+
+   .reveal defaults to fully visible with no
+   transform. This is the safe baseline for
+   no-JS environments and older browsers
+   without IntersectionObserver - content is
+   never hidden unless <html> already carries
+   the .js class (see the inline script in
+   <head>, which adds it synchronously before
+   paint) AND scroll-reveal.js has actually
+   attached the .reveal class to an element.
+========================================== */
+
+.reveal{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+/* ==========================================
+   SCROLL REVEAL (JS-enabled hidden state)
+========================================== */
+
+html.js .reveal{
+
+    opacity:0;
+
+    transform:translateY(24px);
+
+    transition:
+        opacity var(--transition-slow),
+        transform var(--transition-slow);
+
+    transition-delay:var(--reveal-delay, 0ms);
+
+}
+
+html.js .reveal.is-visible{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+/* ==========================================
+   REDUCED MOTION
+
+   Guarantees nothing stays hidden or animates,
+   regardless of the .js / .reveal / .is-visible
+   state above.
+========================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+    .reveal,
+    html.js .reveal{
+
+        opacity:1 !important;
+
+        transform:none !important;
+
+        transition:none !important;
+
+    }
+
+}
