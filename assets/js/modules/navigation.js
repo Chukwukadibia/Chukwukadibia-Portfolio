@@ -219,8 +219,6 @@ function openMenu(nav) {
 
     nav.menu.classList.add("is-open");
 
-    nav.menu.setAttribute("aria-hidden", "false");
-
     nav.html.classList.add("menu-open");
 
     nav.toggle.classList.add("is-active");
@@ -243,8 +241,6 @@ function openMenu(nav) {
 function closeMenu(nav) {
 
     nav.menu.classList.remove("is-open");
-
-    nav.menu.setAttribute("aria-hidden", "true");
 
     nav.html.classList.remove("menu-open");
 

@@ -116,7 +116,7 @@ textarea.form-control{
 
     content:" *";
 
-    color:var(--clr-danger-500);
+    color:var(--clr-danger-600);
 }
 
 /* ==========================================
@@ -154,7 +154,7 @@ textarea.form-control{
         0
         0;
 
-    color:var(--clr-danger-500);
+    color:var(--clr-danger-600);
 
     font-size:var(--fs-sm);
 
@@ -196,7 +196,7 @@ textarea.form-control{
 
     background:rgb(16 185 129 / 10%);
 
-    color:var(--clr-success);
+    color:var(--clr-success-700);
 
     border:1px solid rgb(16 185 129 / 30%);
 
@@ -206,7 +206,7 @@ textarea.form-control{
 
     background:rgb(239 68 68 / 10%);
 
-    color:var(--clr-danger-500);
+    color:var(--clr-danger-600);
 
     border:1px solid rgb(239 68 68 / 30%);
 

@@ -41,6 +41,7 @@
     /* Success */
 
     --clr-success:#10b981;
+    --clr-success-700:#047857; /* text-safe shade: 5.48:1 on white, --clr-success alone is only 2.54:1 */
 
     /* Warning */
 
@@ -50,6 +51,7 @@
 
     --clr-danger:#ef4444;
     --clr-danger-500:var(--clr-danger);
+    --clr-danger-600:#dc2626; /* text-safe shade: 4.83:1 on white, --clr-danger-500 alone is only 3.76:1 */
 
     /* Accent */
 
