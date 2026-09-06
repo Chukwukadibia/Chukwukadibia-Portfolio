@@ -142,11 +142,145 @@
 
     <!-- ==========================================
          CSS
+
+         Loaded as individual <link rel="stylesheet">
+         tags (parallel HTTP requests) instead of the
+         previous single style.css with 44 sequential
+         @import statements. @import chains are
+         render-blocking AND serialized - each file
+         waits for the one before it to finish loading
+         before it even starts - whereas the browser
+         fetches multiple <link> tags in parallel. Order
+         below matches the original @import cascade
+         exactly, so specificity/override behavior is
+         unchanged.
+
+         16 of the original 44 imports pointed to empty
+         (0-byte) placeholder files - grid.css, badges,
+         social-links, timeline (components), tech-stack
+         (sections - note components/tech-stack.css is
+         NOT empty and IS included below), blog, the
+         three pages/*.css files, dark theme, and all
+         four utilities/*.css files. Those files still
+         exist on disk as their designated future home
+         for that concern, but are intentionally left out
+         of this list while empty, since a <link> to an
+         empty file is a wasted request. Add them back in
+         their original position (see the old style.css
+         in git history) once they have real content.
     ========================================== -->
 
     <link
         rel="stylesheet"
-        href="assets/css/style.css">
+        href="assets/css/foundation/tokens.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/foundation/reset.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/foundation/typography.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/foundation/base.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/layout/container.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/layout/section.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/layout/layout.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/header.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/buttons.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/cards.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/card-interactions.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/tech-stack.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/tags.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/avatar.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/forms.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components/navigation.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/hero.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/about.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/expertise.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/projects.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/teaching.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/process.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/timeline.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/testimonials.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/faq.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/contact.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections/footer.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/animations.css">
 
 </head>
 
@@ -493,7 +627,7 @@
                             <figure class="hero-photo">
 
                                 <img
-                                    src="assets/images/profile/benjamin.png"
+                                    src="assets/images/profile/benjamin.webp"
                                     alt="Benjamin Chukwukadibia"
                                     class="hero-image"
                                     width="640"
@@ -1206,7 +1340,7 @@
                                             aria-label="View Restaurant Website project">
 
                                             <img
-                                                src="assets/images/projects/project-01.png"
+                                                src="assets/images/projects/project-01.webp"
                                                 alt="Homepage of the Restaurant Website project"
                                                 width="1280"
                                                 height="720"
@@ -2022,7 +2156,7 @@
 
                                     <img
                                         class="avatar avatar--md"
-                                        src="assets/images/testimonials/client-01.png"
+                                        src="assets/images/testimonials/client-01.webp"
                                         alt="Portrait of John Doe"
                                         width="80"
                                         height="80"
