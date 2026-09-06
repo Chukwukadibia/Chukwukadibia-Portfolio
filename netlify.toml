@@ -1,0 +1,39 @@
+# ==========================================
+# Netlify Configuration
+# Benjamin Chukwukadibia Portfolio
+# ==========================================
+#
+# Static site, no build step, no bundler - publishing directly from
+# the repo root. Specifying this explicitly (rather than relying on
+# Netlify's UI setup wizard) makes the deploy config reproducible and
+# version-controlled instead of a manual setting that could get lost
+# or misconfigured if the site is ever reconnected/rebuilt.
+
+[build]
+  publish = "."
+
+# 404.html at the repo root is served automatically by Netlify for
+# any unmatched path with a real 404 status - no redirect rule
+# needed for that.
+
+# Netlify Forms: the contact form in index.html already has
+# data-netlify="true" (plus a matching hidden form-name input and a
+# honeypot field) directly in the static HTML, which is all Netlify
+# needs to detect and register the form at deploy time - no
+# additional config here.
+
+# Basic security headers, applied site-wide.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Note: no custom Cache-Control overrides here. Asset filenames in
+# this project aren't fingerprinted/hashed (e.g. benjamin.webp, not
+# benjamin.a1b2c3.webp), so an aggressive long-lived/immutable cache
+# would risk serving stale assets after a future update to the same
+# filename. Netlify's default caching + ETag revalidation is the
+# safer choice until/unless the project adopts hashed filenames.

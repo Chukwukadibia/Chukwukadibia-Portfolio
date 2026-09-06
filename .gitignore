@@ -1,0 +1,17 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+
+# Netlify CLI local state (created by `netlify dev` / `netlify link`)
+.netlify/
+
+# Environment variables (none currently used - this is a fully
+# static site with no API keys, but ignored preemptively)
+.env
+.env.local
+
+# Node (not currently used by this project, but ignored in case any
+# local tooling gets added later)
+node_modules/
+npm-debug.log*
