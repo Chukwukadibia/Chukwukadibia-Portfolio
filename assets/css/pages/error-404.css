@@ -1,0 +1,80 @@
+/* ==========================================
+   ERROR 404 PAGE
+   Benjamin Chukwukadibia Portfolio
+========================================== */
+
+.error-404{
+
+    min-height:100svh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding-block:var(--space-12);
+
+}
+
+.error-404-code{
+
+    font-family:var(--ff-heading, inherit);
+
+    font-size:clamp(4rem, 12vw, 8rem);
+
+    font-weight:800;
+
+    line-height:1;
+
+    color:var(--clr-primary-600);
+
+    margin-bottom:var(--space-4);
+
+}
+
+.error-404-title{
+
+    font-size:var(--fs-h2, 1.75rem);
+
+    font-weight:700;
+
+    margin-bottom:var(--space-4);
+
+}
+
+.error-404-message{
+
+    color:var(--text-secondary, var(--clr-neutral-600));
+
+    max-width:32rem;
+
+    margin-inline:auto;
+
+    margin-bottom:var(--space-8);
+
+}
+
+.error-404-actions{
+
+    display:flex;
+
+    gap:var(--space-4);
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+@media (prefers-reduced-motion: reduce){
+
+    .error-404 *{
+
+        transition:none;
+
+    }
+
+}
